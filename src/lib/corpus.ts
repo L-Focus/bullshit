@@ -2,8 +2,8 @@ import { readFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import dayjs from "dayjs";
-import GLOBAL_CONFIG from "../config/config";
-import { CorpusType } from "../type/";
+import GLOBAL_CONFIG from "../config/config.js";
+import { CorpusType } from "../type/index.js";
 
 const currentDirname = dirname(fileURLToPath(import.meta.url));
 

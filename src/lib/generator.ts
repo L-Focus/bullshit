@@ -1,6 +1,6 @@
 import { isFunction } from "lodash-es";
-import { CorpusType } from "../type";
-import { createRandomPicker, randomInt } from "./random";
+import { CorpusType } from "../type/index.js";
+import { createRandomPicker, randomInt } from "./random.js";
 
 const sentence = (
   pick: () => string,
