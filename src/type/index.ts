@@ -1,0 +1,1 @@
+export type CorpusType = Record<string, string[]>
