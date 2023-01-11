@@ -30,11 +30,13 @@ export const saveCorpus = (title: string, article: string[]): string => {
   const time = dayjs().format(GLOBAL_CONFIG.dayjsFormat);
   const outputFile = resolve(outputDir, `${title}${time}.txt`);
 
+  console.log(outputFile);
+
   if (!existsSync(outputDir)) {
     mkdirSync(outputDir);
   }
 
-  const text = `${title}\n\n${article.join("\n")}`;
+  const text = `${title}\n\n    ${article.join("\n")}`;
   writeFileSync(outputFile, text);
 
   return outputFile;

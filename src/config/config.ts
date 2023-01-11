@@ -1,5 +1,5 @@
 const GLOBAL_CONFIG = {
-  dayjsFormat: "|YYYY/MM/DD|HH:mm:ss",
+  dayjsFormat: "_YYYY-MM-DD_HH:mm:ss",
 };
 
 export default GLOBAL_CONFIG;
