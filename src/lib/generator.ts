@@ -1,6 +1,5 @@
-import { isFunction } from "lodash-es";
-import { CorpusType } from "../type/index.js";
-import { createRandomPicker, randomInt } from "./random.js";
+import { CorpusType } from "../type";
+import { createRandomPicker, randomInt } from "./random";
 
 const sentence = (
   pick: () => string,
@@ -9,7 +8,7 @@ const sentence = (
   let ret = pick();
 
   Object.entries(replacer).forEach(([key, value]) => {
-    const replaceStr = isFunction(value) ? value() : value;
+    const replaceStr = typeof value === "function" ? value() : value;
     ret = ret.replace(new RegExp(`{{${key}}}`, "g"), replaceStr);
   });
 

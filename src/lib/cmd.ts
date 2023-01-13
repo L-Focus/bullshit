@@ -1,3 +1,4 @@
+import process from "node:process";
 import commandLineArgs from "command-line-args";
 import commandLineUsage from "command-line-usage";
 

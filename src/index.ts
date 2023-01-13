@@ -1,8 +1,8 @@
-import { generate } from "./lib/generator.js";
-import { loadCorpus, saveCorpus } from "./lib/corpus.js";
-import { createRandomPicker } from "./lib/random.js";
-import options from "./lib/cmd.js";
-import { interact } from "./lib/interact.js";
+import { generate } from "./lib/generator";
+import { loadCorpus, saveCorpus } from "./lib/corpus";
+import { createRandomPicker } from "./lib/random";
+import options from "./lib/cmd";
+import { interact } from "./lib/interact";
 
 const corpus = loadCorpus("corpus/data.json");
 let title = options.title || createRandomPicker(corpus.title)();
